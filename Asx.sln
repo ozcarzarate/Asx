@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlScrapperTest", "HtmlScr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlScrapper", "HtmlScrapper\HtmlScrapper.csproj", "{916FC0AD-9549-4FAB-A951-90E941B1B885}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Domain", "Investment.Domain\Investment.Domain.csproj", "{6CD659E9-02FA-4FE7-8724-EB08CD6AE4D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{916FC0AD-9549-4FAB-A951-90E941B1B885}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{916FC0AD-9549-4FAB-A951-90E941B1B885}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{916FC0AD-9549-4FAB-A951-90E941B1B885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD659E9-02FA-4FE7-8724-EB08CD6AE4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD659E9-02FA-4FE7-8724-EB08CD6AE4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD659E9-02FA-4FE7-8724-EB08CD6AE4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD659E9-02FA-4FE7-8724-EB08CD6AE4D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
