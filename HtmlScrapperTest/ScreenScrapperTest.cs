@@ -20,11 +20,20 @@ namespace HtmlScrapperTest
         }
 
         [TestMethod]
-        public async Task GetOrice_WithCba_ShouldReturnLotsOfMoneySmilingFace()
+        public async Task GetPrice_WithCba_ShouldReturnLotsOfMoneySmilingFace()
         {
             var sut = new ScreenScapper();
             var price = await sut.GetYahooPrice("CBA.AX");
             Assert.AreEqual(74.20, price);
+        }
+
+        //AUDUSD%3DX
+        [TestMethod]
+        public async Task GetPrice_WithAudUsd_ShouldReturnLotsOfMoneySmilingFace()
+        {
+            var sut = new ScreenScapper();
+            var price = await sut.GetYahooPrice("AUDUSD=X");
+            Assert.AreEqual(0.7100, price);
         }
     }
 }
