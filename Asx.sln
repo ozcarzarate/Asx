@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlScrapper", "HtmlScrappe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Domain", "Investment.Domain\Investment.Domain.csproj", "{6CD659E9-02FA-4FE7-8724-EB08CD6AE4D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Persistance", "Investment.Persistance\Investment.Persistance.csproj", "{1AE2B6BC-96AB-4E66-B083-8C109063128F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Persistance.Console", "Investment.Persistance.Console\Investment.Persistance.Console.csproj", "{210F4AB7-CCA8-43C8-B42C-9815500DD967}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{6CD659E9-02FA-4FE7-8724-EB08CD6AE4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CD659E9-02FA-4FE7-8724-EB08CD6AE4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CD659E9-02FA-4FE7-8724-EB08CD6AE4D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AE2B6BC-96AB-4E66-B083-8C109063128F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AE2B6BC-96AB-4E66-B083-8C109063128F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AE2B6BC-96AB-4E66-B083-8C109063128F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AE2B6BC-96AB-4E66-B083-8C109063128F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{210F4AB7-CCA8-43C8-B42C-9815500DD967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{210F4AB7-CCA8-43C8-B42C-9815500DD967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{210F4AB7-CCA8-43C8-B42C-9815500DD967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{210F4AB7-CCA8-43C8-B42C-9815500DD967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
