@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1AE2B6BC-96AB-4E66-B083-8C109063128F}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{D7D2DCE9-CD34-4E37-BF00-9847F3B06BB2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Investment.Persistance</RootNamespace>
-    <AssemblyName>Investment.Persistance</AssemblyName>
+    <RootNamespace>Investment.Persistance.Console.Generator</RootNamespace>
+    <AssemblyName>Investment.Persistance.Console.Generator</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -49,35 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDbContextProvider.cs" />
-    <Compile Include="InvestmentContext.cs" />
-    <Compile Include="InvestmentDbContextProvider.cs" />
-    <Compile Include="Migrations\201602140952196_a.cs" />
-    <Compile Include="Migrations\201602140952196_a.Designer.cs">
-      <DependentUpon>201602140952196_a.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\BaseRepository.cs" />
-    <Compile Include="Repositories\PositionRepository.cs" />
-    <Compile Include="Migrations\ScriptGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Investment.Domain\Investment.Domain.csproj">
-      <Project>{6cd659e9-02fa-4fe7-8724-eb08cd6ae4d0}</Project>
-      <Name>Investment.Domain</Name>
+    <ProjectReference Include="..\Investment.Persistance\Investment.Persistance.csproj">
+      <Project>{1ae2b6bc-96ab-4e66-b083-8c109063128f}</Project>
+      <Name>Investment.Persistance</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602140952196_a.resx">
-      <DependentUpon>201602140952196_a.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
