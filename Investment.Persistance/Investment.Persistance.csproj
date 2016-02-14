@@ -52,6 +52,11 @@
     <Compile Include="IDbContextProvider.cs" />
     <Compile Include="InvestmentContext.cs" />
     <Compile Include="InvestmentDbContextProvider.cs" />
+    <Compile Include="Migrations\201602140952196_a.cs" />
+    <Compile Include="Migrations\201602140952196_a.Designer.cs">
+      <DependentUpon>201602140952196_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\PositionRepository.cs" />
@@ -67,6 +72,11 @@
       <Project>{6cd659e9-02fa-4fe7-8724-eb08cd6ae4d0}</Project>
       <Name>Investment.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602140952196_a.resx">
+      <DependentUpon>201602140952196_a.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
