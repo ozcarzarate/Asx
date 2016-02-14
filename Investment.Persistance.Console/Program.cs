@@ -11,7 +11,12 @@ namespace Investment.Persistance.Console
     {
         static void Main(string[] args)
         {
-            Database.SetInitializer<InvestmentContext>(null);
+            
+
+            using (var context = new InvestmentContext())
+            {
+                var investment = context.Positions.ToList();
+            }
         }
     }
 }

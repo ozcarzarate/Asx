@@ -21,7 +21,7 @@ namespace HtmlScrapper
                 {
                     Debug.WriteLine(row.ChildNodes[1].InnerText);
                 }
-                var asd = 1;
+                
             }
         }
 

@@ -49,8 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IDbContextProvider.cs" />
     <Compile Include="InvestmentContext.cs" />
+    <Compile Include="InvestmentDbContextProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="Repositories\PositionRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

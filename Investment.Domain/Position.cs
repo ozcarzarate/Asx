@@ -2,9 +2,10 @@
 
 namespace Investment.Domain
 {
-    public class Investment
+    public class Position
     {
-        public string Code { get; set; }
+        public int Id { get; set; }
+        public string Key { get; set; }
         public DateTime DateWhenBought { get; set; }
         public int Quantity { get; set; }
         public double PceWhenBought { get; set; }
