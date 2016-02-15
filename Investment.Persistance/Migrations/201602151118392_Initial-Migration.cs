@@ -3,7 +3,7 @@ namespace Investment.Persistance.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreation : DbMigration
+    public partial class InitialMigration : DbMigration
     {
         public override void Up()
         {
@@ -27,10 +27,18 @@ namespace Investment.Persistance.Migrations
                         DateWhenBought = c.DateTime(nullable: false),
                         Quantity = c.Int(nullable: false),
                         PriceWhenBought = c.Double(nullable: false),
+                        CurrencyCode = c.String(),
                         CommissionPaidWhenBought = c.Double(nullable: false),
                         CurrentPrice = c.Double(nullable: false),
                         TotalDistributionSinceBought = c.Double(nullable: false),
                         ComissionPaidWhenSell = c.Double(nullable: false),
+                        TotalWhenBought = c.Double(),
+                        TotalNow = c.Double(),
+                        DifferencePercentage = c.Double(),
+                        DaysSinceBought = c.Int(),
+                        DifferenceMoney = c.Double(),
+                        PercentageOfInvestment = c.Double(),
+                        Discriminator = c.String(nullable: false, maxLength: 128),
                     })
                 .PrimaryKey(t => t.Id);
             
