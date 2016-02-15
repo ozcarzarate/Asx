@@ -14,8 +14,9 @@ namespace Investment.Persistance
         public InvestmentContext() : base("Name=Investments"){}
 
         public DbSet<Position> Positions { get; set; }
-
         public DbSet<Distribution> Distributions { get; set; }
+        public DbSet<Share> Shares { get; set; }
+        public DbSet<Price> Prices { get; set; }
 
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)

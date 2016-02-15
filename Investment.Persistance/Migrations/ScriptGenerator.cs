@@ -9,7 +9,7 @@ namespace Investment.Persistance.Migrations
         {
             var migrator = new DbMigrator(new Configuration());
             var scriptor = new MigratorScriptingDecorator(migrator);
-            var sql = scriptor.ScriptUpdate("", "a");
+            var sql = scriptor.ScriptUpdate("", "");
             //var sql = scriptor.ScriptUpdate("Name-Of-Source-Migration", "Name-Of-Target-Migration");
             return sql;
         }

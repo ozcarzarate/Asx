@@ -9,6 +9,6 @@ namespace Investment.Persistance.Console.Generator
             var generator = new ScriptGenerator();
             var result = generator.Run(null, null);
             System.Console.WriteLine(result);
-}
+        }
     }
 }

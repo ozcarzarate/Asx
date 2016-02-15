@@ -3,7 +3,7 @@ namespace Investment.Persistance.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class a : DbMigration
+    public partial class InitialCreation : DbMigration
     {
         public override void Up()
         {
@@ -34,10 +34,41 @@ namespace Investment.Persistance.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
+            CreateTable(
+                "dbo.Prices",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Code = c.String(),
+                        Date = c.DateTime(nullable: false),
+                        Open = c.Double(nullable: false),
+                        Close = c.Double(nullable: false),
+                        Low = c.Double(nullable: false),
+                        High = c.Double(nullable: false),
+                        Share_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Shares", t => t.Share_Id)
+                .Index(t => t.Share_Id);
+            
+            CreateTable(
+                "dbo.Shares",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Code = c.String(),
+                        Description = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.Prices", "Share_Id", "dbo.Shares");
+            DropIndex("dbo.Prices", new[] { "Share_Id" });
+            DropTable("dbo.Shares");
+            DropTable("dbo.Prices");
             DropTable("dbo.Positions");
             DropTable("dbo.Distributions");
         }
