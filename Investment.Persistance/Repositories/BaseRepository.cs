@@ -1,4 +1,4 @@
-﻿using Investment.Domain.Repositories.Interfaces;
+﻿using Investment.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 

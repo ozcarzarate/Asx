@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Investment.Domain;
+using Investment.Domain.Interfaces;
 
 namespace Investment.Persistance.Repositories
 {
-    public class PositionRepository : BaseRepository<Position>
+    public class PositionRepository : BaseRepository<Position>, IPositionRepository
     {
         public PositionRepository(IDbContextProvider dbContextProvider) : base(dbContextProvider){}
 
