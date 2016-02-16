@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Investment.Domain.Repositories.Interfaces
+namespace Investment.Domain.Interfaces
 {
     public interface IBaseRepository<T>
     {

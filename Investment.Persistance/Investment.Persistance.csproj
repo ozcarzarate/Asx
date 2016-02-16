@@ -52,9 +52,9 @@
     <Compile Include="IDbContextProvider.cs" />
     <Compile Include="InvestmentContext.cs" />
     <Compile Include="InvestmentDbContextProvider.cs" />
-    <Compile Include="Migrations\201602150432276_Initial-Creation.cs" />
-    <Compile Include="Migrations\201602150432276_Initial-Creation.Designer.cs">
-      <DependentUpon>201602150432276_Initial-Creation.cs</DependentUpon>
+    <Compile Include="Migrations\201602151118392_Initial-Migration.cs" />
+    <Compile Include="Migrations\201602151118392_Initial-Migration.Designer.cs">
+      <DependentUpon>201602151118392_Initial-Migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201602160050572_Added-Something.cs" />
     <Compile Include="Migrations\201602160050572_Added-Something.Designer.cs">
@@ -79,8 +79,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602150432276_Initial-Creation.resx">
-      <DependentUpon>201602150432276_Initial-Creation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602151118392_Initial-Migration.resx">
+      <DependentUpon>201602151118392_Initial-Migration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602160050572_Added-Something.resx">
       <DependentUpon>201602160050572_Added-Something.cs</DependentUpon>

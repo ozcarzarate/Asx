@@ -1,11 +1,12 @@
 ﻿using HtmlAgilityPack;
+using Investment.Domain.Interfaces;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace HtmlScrapper
 {
-    public class ScreenScapper
+    public class ScreenScapper : IScreenScrapper
     {
         public async Task DoWork(string Url)
         {
