@@ -7,8 +7,15 @@ namespace Investment.Persistance
     {
         static InvestmentContext()
         {
-            //TODO decide environments
-            Database.SetInitializer<InvestmentContext>(new CreateDatabaseIfNotExists<InvestmentContext>());
+            //TODO decide what to use according to environments 
+            //DropCreateDatabaseIfModelChanges<TContext>, 
+            //DropCreateDatabaseAlways<TContext>, 
+            //CreateDatabaseIfNotExists<TContext>)
+
+
+
+            //Database.SetInitializer<InvestmentContext>(new CreateDatabaseIfNotExists<InvestmentContext>());
+            Database.SetInitializer<InvestmentContext>(null);
         }
 
         public InvestmentContext() : base("Name=Investments"){}
@@ -18,7 +25,9 @@ namespace Investment.Persistance
         public DbSet<Share> Shares { get; set; }
         public DbSet<Price> Prices { get; set; }
 
+        public DbSet<Something> Somethings { get; set; }
 
+        
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
         //    modelBuilder.Entity<Domain.Investment>().HasKey(i => new

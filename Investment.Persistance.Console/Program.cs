@@ -15,7 +15,7 @@ namespace Investment.Persistance.Console
 
             using (var context = new InvestmentContext())
             {
-                var investment = context.Positions.ToList();
+                var investment = context.Shares.ToList();
             }
         }
     }

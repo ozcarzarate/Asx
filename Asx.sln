@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Persistance.Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Persistance.Console.Generator", "Investment.Persistance.Console.Generator\Investment.Persistance.Console.Generator.csproj", "{D7D2DCE9-CD34-4E37-BF00-9847F3B06BB2}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Invesment.Persistance.Database", "Invesment.Persistance.Database\Invesment.Persistance.Database.sqlproj", "{9E7E8235-55FF-4EE5-97D3-697BF928AA72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,12 @@ Global
 		{D7D2DCE9-CD34-4E37-BF00-9847F3B06BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7D2DCE9-CD34-4E37-BF00-9847F3B06BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7D2DCE9-CD34-4E37-BF00-9847F3B06BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E7E8235-55FF-4EE5-97D3-697BF928AA72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E7E8235-55FF-4EE5-97D3-697BF928AA72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E7E8235-55FF-4EE5-97D3-697BF928AA72}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9E7E8235-55FF-4EE5-97D3-697BF928AA72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E7E8235-55FF-4EE5-97D3-697BF928AA72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E7E8235-55FF-4EE5-97D3-697BF928AA72}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
