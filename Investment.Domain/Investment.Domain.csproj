@@ -56,6 +56,7 @@
     <Compile Include="Services\Interfaces\IPositionService.cs" />
     <Compile Include="Services\PositionService.cs" />
     <Compile Include="Share.cs" />
+    <Compile Include="Something.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
