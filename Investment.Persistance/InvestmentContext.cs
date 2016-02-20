@@ -14,8 +14,8 @@ namespace Investment.Persistance
 
 
 
-            //Database.SetInitializer<InvestmentContext>(new CreateDatabaseIfNotExists<InvestmentContext>());
-            Database.SetInitializer<InvestmentContext>(null);
+            Database.SetInitializer<InvestmentContext>(new CreateDatabaseIfNotExists<InvestmentContext>());
+            //Database.SetInitializer<InvestmentContext>(null);
         }
 
         public InvestmentContext() : base("Name=Investments"){}
@@ -24,9 +24,7 @@ namespace Investment.Persistance
         public DbSet<Distribution> Distributions { get; set; }
         public DbSet<Share> Shares { get; set; }
         public DbSet<Price> Prices { get; set; }
-
-        public DbSet<Something> Somethings { get; set; }
-
+        
         
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{

@@ -3,6 +3,8 @@ using Investment.Domain.Services;
 using Investment.Persistance;
 using Investment.Persistance.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
+
 namespace Investment.Domain.Tests.Services
 {
     [TestClass]
@@ -17,7 +19,8 @@ namespace Investment.Domain.Tests.Services
             var sut = new PositionService(positionRepository, screenScrapper);
 
             var actual = sut.GetCurrentPosition();
-            var asd = 1;
+
+            Assert.AreEqual(17, actual.ToList().Count);
         }
     }
 }
