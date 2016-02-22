@@ -11,11 +11,11 @@ namespace Investment.Persistance
             //DropCreateDatabaseIfModelChanges<TContext>, 
             //DropCreateDatabaseAlways<TContext>, 
             //CreateDatabaseIfNotExists<TContext>)
-
-
-
-            //Database.SetInitializer<InvestmentContext>(new CreateDatabaseIfNotExists<InvestmentContext>());
+#if DEBUG
+            Database.SetInitializer<InvestmentContext>(new CreateDatabaseIfNotExists<InvestmentContext>());
+#else
             Database.SetInitializer<InvestmentContext>(null);
+#endif
         }
 
         public InvestmentContext() : base("Name=Investments"){}
