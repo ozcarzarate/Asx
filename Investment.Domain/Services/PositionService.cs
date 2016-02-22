@@ -10,10 +10,10 @@ namespace Investment.Domain.Services
     {
         private readonly IPositionRepository _positionRepository;
         private readonly IScreenScrapper _screenScrapper;
-        public PositionService(IPositionRepository PositionRepository, IScreenScrapper ScreenScrapper)
+        public PositionService(IPositionRepository positionRepository, IScreenScrapper screenScrapper)
         {
-            _positionRepository = PositionRepository;
-            _screenScrapper = ScreenScrapper;
+            _positionRepository = positionRepository;
+            _screenScrapper = screenScrapper;
         }
 
         public IEnumerable<CurrentPosition> GetCurrentPosition()
