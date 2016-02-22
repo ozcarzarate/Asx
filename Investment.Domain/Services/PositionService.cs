@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Investment.Domain.Services.Interfaces;
 using Investment.Domain.Interfaces;
+using AutoMapper;
 
 namespace Investment.Domain.Services
 {
@@ -17,14 +18,16 @@ namespace Investment.Domain.Services
 
         public IEnumerable<CurrentPosition> GetCurrentPosition()
         {
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Position, CurrentPosition>());
+            var mapper = config.CreateMapper();
             var result = new List<CurrentPosition>();
             var positions = _positionRepository.Get();
             foreach (var position in positions)
             {
-                var current = (CurrentPosition)position;
+                var current = mapper.Map<CurrentPosition>(position);
                 if (current.CurrencyCode == "AUD")
                 {
-                    current.CurrentPrice = _screenScrapper.GetYahooPrice(current.Key).Result;
+                    current.CurrentPrice = _screenScrapper.GetYahooPrice($"{current.Key}.AX").Result;
                 }
                 else
                 {
@@ -33,6 +36,9 @@ namespace Investment.Domain.Services
                 //make the calculation
                 current.TotalNow = current.Quantity * current.CurrentPrice;
                 current.TotalWhenBought = current.Quantity * current.PriceWhenBought;
+                current.DaysSinceBought = (int)(DateTime.Now - current.DateWhenBought).TotalDays;
+                current.DifferenceMoney = current.TotalNow - current.TotalWhenBought;
+                current.DifferencePercentage = (current.DifferenceMoney / current.TotalWhenBought) * 100;
                 result.Add(current);
             }
             return result;

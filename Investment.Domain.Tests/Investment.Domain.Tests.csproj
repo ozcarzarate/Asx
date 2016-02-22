@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1AE2B6BC-96AB-4E66-B083-8C109063128F}</ProjectGuid>
+    <ProjectGuid>{B50EB001-29DA-45B9-8DF0-7AC091AEEB7E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Investment.Persistance</RootNamespace>
-    <AssemblyName>Investment.Persistance</AssemblyName>
+    <RootNamespace>Investment.Domain.Tests</RootNamespace>
+    <AssemblyName>Investment.Domain.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -38,6 +38,11 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Moq, Version=4.2.1510.2205, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.2.1510.2205\lib\net40\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -49,35 +54,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDbContextProvider.cs" />
-    <Compile Include="InvestmentContext.cs" />
-    <Compile Include="InvestmentDbContextProvider.cs" />
-    <Compile Include="Migrations\201602200641194_Intial.cs" />
-    <Compile Include="Migrations\201602200641194_Intial.Designer.cs">
-      <DependentUpon>201602200641194_Intial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\BaseRepository.cs" />
-    <Compile Include="Repositories\PositionRepository.cs" />
-    <Compile Include="Migrations\ScriptGenerator.cs" />
+    <Compile Include="Services\PositionServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HtmlScrapper\HtmlScrapper.csproj">
+      <Project>{916fc0ad-9549-4fab-a951-90e941b1b885}</Project>
+      <Name>HtmlScrapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Investment.Domain\Investment.Domain.csproj">
       <Project>{6cd659e9-02fa-4fe7-8724-eb08cd6ae4d0}</Project>
       <Name>Investment.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Investment.Persistance\Investment.Persistance.csproj">
+      <Project>{1ae2b6bc-96ab-4e66-b083-8c109063128f}</Project>
+      <Name>Investment.Persistance</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602200641194_Intial.resx">
-      <DependentUpon>201602200641194_Intial.cs</DependentUpon>
-    </EmbeddedResource>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

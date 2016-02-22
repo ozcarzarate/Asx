@@ -25,8 +25,6 @@ namespace Investment.Persistance
         public DbSet<Share> Shares { get; set; }
         public DbSet<Price> Prices { get; set; }
 
-        public DbSet<Something> Somethings { get; set; }
-
         
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
